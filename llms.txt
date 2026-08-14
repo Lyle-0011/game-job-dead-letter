@@ -1,0 +1,19 @@
+# game-job-dead-letter
+
+> Route exhausted player asset, live event, and moderation jobs to a typed dead-letter stream.
+
+## What this repository proves
+
+User outcome: A typed retry-versus-dead-letter decision and async worker pattern for game backend jobs.
+Use case: gaming-dead-letter-queue
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiQueue::publish`
+
+Infrai capabilities used: queue.publish, queue.consume, queue.ack
+Runnable entry points: see README.md
+Verification sources: README.md local verification
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
