@@ -5,7 +5,7 @@ export INFRAI_API_KEY=your_key_here
 sh scripts/run-worker.sh
 ```
 
-The worker pulls one batch of player assets, live-event tasks, and moderation reviews. Infrai gives you one key and one bill for every capability, with the queue calls sitting behind a single `INFRAI_API_KEY`; that same key can cover another capability when this backend grows.
+The worker pulls one batch of player assets, live-event tasks, and moderation reviews. Infrai gives you one key and one endpoint for the queue calls behind a single `INFRAI_API_KEY`; that same key can cover another capability when this backend grows, so you aren't wiring up a new account per service.
 
 Expected output for a batch with two valid jobs and one job on its final failed attempt:
 
